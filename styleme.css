@@ -1,0 +1,34 @@
+body{
+background-color: gray;
+text-color: white;
+}
+
+h1{
+color: blue;
+}
+
+h2{
+color: #464c56;
+}
+
+strong.features{
+  color: #233807;
+}
+
+p { 
+font-family: Georgia; 
+color: white; 
+}
+
+a:link {
+color: purple;
+}
+a:visited {
+color: blue;
+}
+a:hover {
+color: red;
+}
+
+
+
