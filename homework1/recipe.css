@@ -1,5 +1,7 @@
 body{
  background-color:white;
+ background-image:url("https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg");
+background-repeat: repeat;
  color:#404040;
  font-size:11pt;
  font-family: Georgia, Garamond, serif;
@@ -23,6 +25,7 @@ font-weight:bold;
 
 a{
 color:#A4A400;
+text-decoration:underline;
 }
 #deleted{
 text-decoration:line-through;
@@ -30,6 +33,19 @@ text-decoration:line-through;
 
 .section{
  border-top-style: solid;
+}
+.comments{
+ background-color:#f4f142;
+  margin-right:4%;
+  margin-left:3%;
+}
+.give-margin{
+margin-left:2%;
+}
+
+.sub-list{
+list-style-type:circle;
+
 }
 
 #copyright{
