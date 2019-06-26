@@ -21,6 +21,7 @@ color: white;
 
 a:link {
 color: purple;
+text-decoration:none;
 }
 a:visited {
 color: blue;
@@ -28,6 +29,8 @@ color: blue;
 a:hover {
 color: red;
 }
+
+
 
 
 
