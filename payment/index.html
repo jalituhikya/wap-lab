@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Payment</title>
+    <link href="layout.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div id="main-content">
+    <form>
+        <fieldset id="personalDetails">
+            <legend>Personal Details</legend>
+
+            <div class="element">
+            <label for="firstName">First Name:</label> <br>
+            <input type="text" id= "firstName" name="firstName" placeholder="John" required/>
+            </div>
+
+            <div class="element">
+                <label for="lastName">Last Name:</label> <br>
+            <input type="text" id="lastName" name="lastName" placeholder="Doe" required/>
+                </div>
+
+            <div class="element">
+                <label for="birthDay">Birth day:</label> <br>
+            <input type="date" id="birthDay" name="birthDay" placeholder="10/12/1989" required/>
+                </div>
+
+            <div class="element">
+                <label for="email">Email:</label> <br>
+            <input type="email" id="email" name="email" placeholder="john@email.com" required>
+                </div>
+
+            <div class="element">
+                <label for="ssn">SSN:</label> <br>
+            <input type="text"  id="ssn" name="ssn" placeholder="1121-24545-24523" required>
+                </div>
+
+            <div class="element">
+                <label for="phone">Phone Number:</label> <br>
+            <input type="tel" id="phone" name="phone" required placeholder="6418789761"/>
+                </div>
+        </fieldset>
+        <fieldset id="billingAddress">
+            <legend>Billing Address</legend>
+
+            <div class="element">
+                <label for="billing-address">Address:</label> <br>
+            <input type="text" id="billing-address" name="billing-address" placeholder="Address" required/>
+           </div>
+
+            <div class="element">
+                <label for="billing-city">City:</label> <br>
+            <input type="text" id="billing-city" name="billing-city" placeholder="city" required/>
+                </div>
+
+            <div class="element">
+                <label for="billing-country">Country</label> <br>
+            <select id="billing-country" name="billing-country" required>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="can">Canada</option>
+                <option value="ger">Germany</option>
+                <option value="swe">Sweden</option>
+                <option value="fr">France</option>
+                <option value="china">China</option>
+                <option value="india">India</option>
+            </select>
+                </div>
+            <div class="element">
+                <label for="billing-zip-code">Zip Code:</label> <br>
+            <input type="number" id="billing-zip-code" name="billing-zip-code"  placeholder="52259" required/>
+                </div>
+        </fieldset>
+        <fieldset id="shippingAddress">
+            <legend>Shipping Address</legend>
+
+            <div class="element">
+                <label for="shipping-address">Address:</label> <br>
+                <input type="text" id="shipping-address" name="shipping-address" placeholder="Address" required/>
+            </div>
+
+            <div class="element">
+                <label for="shipping-city">City:</label> <br>
+                <input type="text" id="shipping-city" name="shipping-city" placeholder="city" required/>
+            </div>
+
+            <div class="element">
+                <label for="shipping-country">Country</label> <br>
+                <select id="shipping-country" name="shipping-country" required>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="can">Canada</option>
+                    <option value="ger">Germany</option>
+                    <option value="swe">Sweden</option>
+                    <option value="fr">France</option>
+                    <option value="china">China</option>
+                    <option value="india">India</option>
+                </select>
+            </div>
+            <div class="element">
+                <label for="shipping-zip-code">Zip Code:</label> <br>
+                <input type="text" id="shipping-zip-code" name="shipping-zip-code" placeholder="52259" required/>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Payment Info</legend>
+            <div class="element">
+                <label for="name-on-card">Name on Card:</label> <br>
+            <input name="name-on-card" id="name-on-card" type="text" placeholder="John Doe"   required/>
+                </div>
+            <div class="element">
+                <label for="card-number" >Card Number:</label> <br>
+            <input name="card-number"  id="card-number"  type="number" placeholder="1217 8812 9223" required/>
+                </div>
+            <div class="element">
+                <label>Expiration Date:</label> <br>
+            <select id="month" name="Month">
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select id="year" name="Year">
+                <option value="20">2020</option>
+                <option value="21">2021</option>
+                <option value="22">2022</option>
+                <option value="23">2023</option>
+                <option value="24">2024</option>
+                <option value="25">2025</option>
+                <option value="26">2026</option>
+                <option value="27">2027</option>
+
+            </select>
+                </div>
+        </fieldset>
+        <div id="terms" class="element">
+        <label>I agree to the <a href="">Terms and Agreement</a><input name="agreement" type="checkbox"/></label>
+        </div>
+        <input type="submit">
+
+    </form>
+</div>
+<footer>
+    <a href="https://validator.w3.org/check/referer">
+        <img src="http://mumstudents.org/cs472/images/w3c-html.png" alt="html validator"/>
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" /></a>
+
+</footer>
+</body>
+</html>
