@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="inheritance.js"></script>
+    <title>
+        Inheritance
+    </title>
+
+</head>
+<body>
+<p>Instructions
+   <ol>
+    <li>Create a function expression named <code>createBicyclePrototye</code> which returns an object literal with one property speed set to value 0 and two methods
+    <code>applyBrake</code> that takes a parameter and decrement the current speed of the object by that given value.
+    <code>speedup</code> that takes a parameter increment current speed by given value.</li>
+    <li>Create another function expression named <code>createMountainBikeProtoype</code>  that take a prototype parameter and returns an object created using Object.create (prototype) with one additional property gear set to value 1 and one additional method setGear which takes a parameter and sets gear value for the object.</li>
+    <li>Write third function expression named <code>start</code> that first make bicycle Prototype object using first function and then mountainBikePrototype object using second function, passing bicyclePrototype as argument.</li>
+    <li>Now create some objects from both bicyclePrototype and mountainBikePrototype using <code>Object.create()</code> and play with it. (do some console.log)</li>
+   <li> Wrap all three functions in a module so that we have only one module variable in the global name space.</li>
+    <li>Make use of 'use strict' at the top of your module.</li>
+    <li>Now, try to achieve above functionality, this time using ES6 class construct.</li>
+</ol>
+<p>
+<strong>See console for results</strong>
+</p>
+</body>
+<a href="https://validator.w3.org/check/referer">
+    <img src="http://mumstudents.org/cs472/images/w3c-html.png" alt="html validator"/>
+</a>
+<a href="https://jigsaw.w3.org/css-validator/check/referer">
+    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"/></a>
+<a href="https://webster.cs.washington.edu/jslint/?referer">
+    <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS"/>
+</a>
+
+</html>
