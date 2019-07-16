@@ -1,0 +1,1942 @@
+/* lab12.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
+
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block
+}
+
+progress {
+    vertical-align: baseline
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+[hidden],
+template {
+    display: none
+}
+
+a {
+    background-color: transparent
+}
+
+a:active,
+a:hover {
+    outline-width: 0
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -0.25em
+}
+
+sup {
+    top: -0.5em
+}
+
+figure {
+    margin: 1em 40px
+}
+
+img {
+    border-style: none
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+button,
+input,
+select,
+textarea,
+optgroup {
+    font: inherit;
+    margin: 0
+}
+
+optgroup {
+    font-weight: bold
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+
+legend {
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+
+/* End extract */
+
+html,
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5
+}
+
+html {
+    overflow-x: hidden
+}
+
+h1 {
+    font-size: 36px
+}
+
+h2 {
+    font-size: 30px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+.lab12-serif {
+    font-family: serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0
+}
+
+.lab12-wide {
+    letter-spacing: 4px
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0
+}
+
+.lab12-image {
+    max-width: 100%;
+    height: auto
+}
+
+img {
+    vertical-align: middle
+}
+
+a {
+    color: inherit
+}
+
+.lab12-table,
+.lab12-table-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table
+}
+
+.lab12-table-all {
+    border: 1px solid #ccc
+}
+
+.lab12-bordered tr,
+.lab12-table-all tr {
+    border-bottom: 1px solid #ddd
+}
+
+.lab12-striped tbody tr:nth-child(even) {
+    background-color: #f1f1f1
+}
+
+.lab12-table-all tr:nth-child(odd) {
+    background-color: #fff
+}
+
+.lab12-table-all tr:nth-child(even) {
+    background-color: #f1f1f1
+}
+
+.lab12-hoverable tbody tr:hover,
+.lab12-ul.lab12-hoverable li:hover {
+    background-color: #ccc
+}
+
+.lab12-centered tr th,
+.lab12-centered tr td {
+    text-align: center
+}
+
+.lab12-table td,
+.lab12-table th,
+.lab12-table-all td,
+.lab12-table-all th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top
+}
+
+.lab12-table th:first-child,
+.lab12-table td:first-child,
+.lab12-table-all th:first-child,
+.lab12-table-all td:first-child {
+    padding-left: 16px
+}
+
+.lab12-btn,
+.lab12-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.lab12-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.lab12-btn,
+.lab12-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.lab12-disabled,
+.lab12-btn:disabled,
+.lab12-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.lab12-disabled *,
+:disabled * {
+    pointer-events: none
+}
+
+.lab12-btn.lab12-disabled:hover,
+.lab12-btn:disabled:hover {
+    box-shadow: none
+}
+
+.lab12-badge,
+.lab12-tag {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center
+}
+
+.lab12-badge {
+    border-radius: 50%
+}
+
+.lab12-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.lab12-ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd
+}
+
+.lab12-ul li:last-child {
+    border-bottom: none
+}
+
+.lab12-tooltip,
+.lab12-display-container {
+    position: relative
+}
+
+.lab12-tooltip .lab12-text {
+    display: none
+}
+
+.lab12-tooltip:hover .lab12-text {
+    display: inline-block
+}
+
+.lab12-ripple:active {
+    opacity: 0.5
+}
+
+.lab12-ripple {
+    transition: opacity 0s
+}
+
+.lab12-input {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%
+}
+
+.lab12-select {
+    padding: 9px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc
+}
+
+.lab12-dropdown-click,
+.lab12-dropdown-hover {
+    position: relative;
+    display: inline-block;
+    cursor: pointer
+}
+
+.lab12-dropdown-hover:hover .lab12-dropdown-content {
+    display: block
+}
+
+.lab12-dropdown-hover:first-child,
+.lab12-dropdown-click:hover {
+    background-color: #ccc;
+    color: #000
+}
+
+.lab12-dropdown-hover:hover > .lab12-button:first-child,
+.lab12-dropdown-click:hover > .lab12-button:first-child {
+    background-color: #ccc;
+    color: #000
+}
+
+.lab12-dropdown-content {
+    cursor: auto;
+    color: #000;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    margin: 0;
+    padding: 0;
+    z-index: 1
+}
+
+.lab12-check,
+.lab12-radio {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 6px
+}
+
+.lab12-sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto
+}
+
+.lab12-bar-block .lab12-dropdown-hover,
+.lab12-bar-block .lab12-dropdown-click {
+    width: 100%
+}
+
+.lab12-bar-block .lab12-dropdown-hover .lab12-dropdown-content,
+.lab12-bar-block .lab12-dropdown-click .lab12-dropdown-content {
+    min-width: 100%
+}
+
+.lab12-bar-block .lab12-dropdown-hover .lab12-button,
+.lab12-bar-block .lab12-dropdown-click .lab12-button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px
+}
+
+.lab12-main,
+#main {
+    transition: margin-left .4s
+}
+
+.lab12-modal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.lab12-modal-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px
+}
+
+.lab12-bar {
+    width: 100%;
+    overflow: hidden
+}
+
+.lab12-center .lab12-bar {
+    display: inline-block;
+    width: auto
+}
+
+.lab12-bar .lab12-bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0
+}
+
+.lab12-bar .lab12-dropdown-hover,
+.lab12-bar .lab12-dropdown-click {
+    position: static;
+    float: left
+}
+
+.lab12-bar .lab12-button {
+    white-space: normal
+}
+
+.lab12-bar-block .lab12-bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
+}
+
+.lab12-bar-block.lab12-center .lab12-bar-item {
+    text-align: center
+}
+
+.lab12-block {
+    display: block;
+    width: 100%
+}
+
+.lab12-responsive {
+    display: block;
+    overflow-x: auto
+}
+
+.lab12-container:after,
+.lab12-container:before,
+.lab12-panel:after,
+.lab12-panel:before,
+.lab12-row:after,
+.lab12-row:before,
+.lab12-row-padding:after,
+.lab12-row-padding:before,
+.lab12-cell-row:before,
+.lab12-cell-row:after,
+.lab12-clear:after,
+.lab12-clear:before,
+.lab12-bar:before,
+.lab12-bar:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.lab12-col,
+.lab12-half,
+.lab12-third,
+.lab12-twothird,
+.lab12-threequarter,
+.lab12-quarter {
+    float: left;
+    width: 100%
+}
+
+.lab12-col.s1 {
+    width: 8.33333%
+}
+
+.lab12-col.s2 {
+    width: 16.66666%
+}
+
+.lab12-col.s3 {
+    width: 24.99999%
+}
+
+.lab12-col.s4 {
+    width: 33.33333%
+}
+
+.lab12-col.s5 {
+    width: 41.66666%
+}
+
+.lab12-col.s6 {
+    width: 49.99999%
+}
+
+.lab12-col.s7 {
+    width: 58.33333%
+}
+
+.lab12-col.s8 {
+    width: 66.66666%
+}
+
+.lab12-col.s9 {
+    width: 74.99999%
+}
+
+.lab12-col.s10 {
+    width: 83.33333%
+}
+
+.lab12-col.s11 {
+    width: 91.66666%
+}
+
+.lab12-col.s12 {
+    width: 99.99999%
+}
+
+@media (min-width:601px) {
+    .lab12-col.m1 {
+        width: 8.33333%
+    }
+    .lab12-col.m2 {
+        width: 16.66666%
+    }
+    .lab12-col.m3,
+    .lab12-quarter {
+        width: 24.99999%
+    }
+    .lab12-col.m4,
+    .lab12-third {
+        width: 33.33333%
+    }
+    .lab12-col.m5 {
+        width: 41.66666%
+    }
+    .lab12-col.m6,
+    .lab12-half {
+        width: 49.99999%
+    }
+    .lab12-col.m7 {
+        width: 58.33333%
+    }
+    .lab12-col.m8,
+    .lab12-twothird {
+        width: 66.66666%
+    }
+    .lab12-col.m9,
+    .lab12-threequarter {
+        width: 74.99999%
+    }
+    .lab12-col.m10 {
+        width: 83.33333%
+    }
+    .lab12-col.m11 {
+        width: 91.66666%
+    }
+    .lab12-col.m12 {
+        width: 99.99999%
+    }
+}
+
+@media (min-width:993px) {
+    .lab12-col.l1 {
+        width: 8.33333%
+    }
+    .lab12-col.l2 {
+        width: 16.66666%
+    }
+    .lab12-col.l3 {
+        width: 24.99999%
+    }
+    .lab12-col.l4 {
+        width: 33.33333%
+    }
+    .lab12-col.l5 {
+        width: 41.66666%
+    }
+    .lab12-col.l6 {
+        width: 49.99999%
+    }
+    .lab12-col.l7 {
+        width: 58.33333%
+    }
+    .lab12-col.l8 {
+        width: 66.66666%
+    }
+    .lab12-col.l9 {
+        width: 74.99999%
+    }
+    .lab12-col.l10 {
+        width: 83.33333%
+    }
+    .lab12-col.l11 {
+        width: 91.66666%
+    }
+    .lab12-col.l12 {
+        width: 99.99999%
+    }
+}
+
+.lab12-rest {
+    overflow: hidden
+}
+
+.lab12-stretch {
+    margin-left: -16px;
+    margin-right: -16px
+}
+
+.lab12-content,
+.lab12-auto {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.lab12-content {
+    max-width: 980px
+}
+
+.lab12-auto {
+    max-width: 1140px
+}
+
+.lab12-cell-row {
+    display: table;
+    width: 100%
+}
+
+.lab12-cell {
+    display: table-cell
+}
+
+.lab12-cell-top {
+    vertical-align: top
+}
+
+.lab12-cell-middle {
+    vertical-align: middle
+}
+
+.lab12-cell-bottom {
+    vertical-align: bottom
+}
+
+.lab12-hide {
+    display: none!important
+}
+
+.lab12-show-block,
+.lab12-show {
+    display: block!important
+}
+
+.lab12-show-inline-block {
+    display: inline-block!important
+}
+
+@media (max-width:1205px) {
+    .lab12-auto {
+        max-width: 95%
+    }
+}
+
+@media (max-width:600px) {
+    .lab12-modal-content {
+        margin: 0 10px;
+        width: auto!important
+    }
+    .lab12-modal {
+        padding-top: 30px
+    }
+    .lab12-dropdown-hover.lab12-mobile .lab12-dropdown-content,
+    .lab12-dropdown-click.lab12-mobile .lab12-dropdown-content {
+        position: relative
+    }
+    .lab12-hide-small {
+        display: none!important
+    }
+    .lab12-mobile {
+        display: block;
+        width: 100%!important
+    }
+    .lab12-bar-item.lab12-mobile,
+    .lab12-dropdown-hover.lab12-mobile,
+    .lab12-dropdown-click.lab12-mobile {
+        text-align: center
+    }
+    .lab12-dropdown-hover.lab12-mobile,
+    .lab12-dropdown-hover.lab12-mobile .lab12-btn,
+    .lab12-dropdown-hover.lab12-mobile .lab12-button,
+    .lab12-dropdown-click.lab12-mobile,
+    .lab12-dropdown-click.lab12-mobile .lab12-btn,
+    .lab12-dropdown-click.lab12-mobile .lab12-button {
+        width: 100%
+    }
+}
+
+@media (max-width:768px) {
+    .lab12-modal-content {
+        width: 500px
+    }
+    .lab12-modal {
+        padding-top: 50px
+    }
+}
+
+@media (min-width:993px) {
+    .lab12-modal-content {
+        width: 900px
+    }
+    .lab12-hide-large {
+        display: none!important
+    }
+    .lab12-sidebar.lab12-collapse {
+        display: block!important
+    }
+}
+
+@media (max-width:992px) and (min-width:601px) {
+    .lab12-hide-medium {
+        display: none!important
+    }
+}
+
+@media (max-width:992px) {
+    .lab12-sidebar.lab12-collapse {
+        display: none
+    }
+    .lab12-main {
+        margin-left: 0!important;
+        margin-right: 0!important
+    }
+    .lab12-auto {
+        max-width: 100%
+    }
+}
+
+.lab12-top,
+.lab12-bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+
+.lab12-top {
+    top: 0
+}
+
+.lab12-bottom {
+    bottom: 0
+}
+
+.lab12-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2
+}
+
+.lab12-display-topleft {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.lab12-display-topright {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.lab12-display-bottomleft {
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+
+.lab12-display-bottomright {
+    position: absolute;
+    right: 0;
+    bottom: 0
+}
+
+.lab12-display-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.lab12-display-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(-0%, -50%)
+}
+
+.lab12-display-right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%)
+}
+
+.lab12-display-topmiddle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%)
+}
+
+.lab12-display-bottommiddle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%)
+}
+
+.lab12-display-container:hover .lab12-display-hover {
+    display: block
+}
+
+.lab12-display-container:hover span.lab12-display-hover {
+    display: inline-block
+}
+
+.lab12-display-hover {
+    display: none
+}
+
+.lab12-display-position {
+    position: absolute
+}
+
+.lab12-circle {
+    border-radius: 50%
+}
+
+.lab12-round-small {
+    border-radius: 2px
+}
+
+.lab12-round,
+.lab12-round-medium {
+    border-radius: 4px
+}
+
+.lab12-round-large {
+    border-radius: 8px
+}
+
+.lab12-round-xlarge {
+    border-radius: 16px
+}
+
+.lab12-round-xxlarge {
+    border-radius: 32px
+}
+
+.lab12-row-padding,
+.lab12-row-padding>.lab12-half,
+.lab12-row-padding>.lab12-third,
+.lab12-row-padding>.lab12-twothird,
+.lab12-row-padding>.lab12-threequarter,
+.lab12-row-padding>.lab12-quarter,
+.lab12-row-padding>.lab12-col {
+    padding: 0 8px
+}
+
+.lab12-container,
+.lab12-panel {
+    padding: 0.01em 16px
+}
+
+.lab12-panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+.lab12-code,
+.lab12-codespan {
+    font-family: Consolas, "courier new";
+    font-size: 16px
+}
+
+.lab12-code {
+    width: auto;
+    background-color: #fff;
+    padding: 8px 12px;
+    border-left: 4px solid #4CAF50;
+    word-wrap: break-word
+}
+
+.lab12-codespan {
+    color: crimson;
+    background-color: #f1f1f1;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 110%
+}
+
+.lab12-card,
+.lab12-card-2 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+.lab12-card-4,
+.lab12-hover-shadow:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.lab12-spin {
+    animation: lab12-spin 2s infinite linear
+}
+
+@keyframes lab12-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(359deg)
+    }
+}
+
+.lab12-animate-fading {
+    animation: fading 10s infinite
+}
+
+@keyframes fading {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.lab12-animate-opacity {
+    animation: opac 0.8s
+}
+
+@keyframes opac {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.lab12-animate-top {
+    position: relative;
+    animation: animatetop 0.4s
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.lab12-animate-left {
+    position: relative;
+    animation: animateleft 0.4s
+}
+
+@keyframes animateleft {
+    from {
+        left: -300px;
+        opacity: 0
+    }
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+.lab12-animate-right {
+    position: relative;
+    animation: animateright 0.4s
+}
+
+@keyframes animateright {
+    from {
+        right: -300px;
+        opacity: 0
+    }
+    to {
+        right: 0;
+        opacity: 1
+    }
+}
+
+.lab12-animate-bottom {
+    position: relative;
+    animation: animatebottom 0.4s
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+.lab12-animate-zoom {
+    animation: animatezoom 0.6s
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.lab12-animate-input {
+    transition: width 0.4s ease-in-out
+}
+
+.lab12-animate-input:focus {
+    width: 100%!important
+}
+
+.lab12-opacity,
+.lab12-hover-opacity:hover {
+    opacity: 0.60
+}
+
+.lab12-opacity-off,
+.lab12-hover-opacity-off:hover {
+    opacity: 1
+}
+
+.lab12-opacity-max {
+    opacity: 0.25
+}
+
+.lab12-opacity-min {
+    opacity: 0.75
+}
+
+.lab12-greyscale-max,
+.lab12-grayscale-max,
+.lab12-hover-greyscale:hover,
+.lab12-hover-grayscale:hover {
+    filter: grayscale(100%)
+}
+
+.lab12-greyscale,
+.lab12-grayscale {
+    filter: grayscale(75%)
+}
+
+.lab12-greyscale-min,
+.lab12-grayscale-min {
+    filter: grayscale(50%)
+}
+
+.lab12-sepia {
+    filter: sepia(75%)
+}
+
+.lab12-sepia-max,
+.lab12-hover-sepia:hover {
+    filter: sepia(100%)
+}
+
+.lab12-sepia-min {
+    filter: sepia(50%)
+}
+
+.lab12-tiny {
+    font-size: 10px!important
+}
+
+.lab12-small {
+    font-size: 12px!important
+}
+
+.lab12-medium {
+    font-size: 15px!important
+}
+
+.lab12-large {
+    font-size: 18px!important
+}
+
+.lab12-xlarge {
+    font-size: 24px!important
+}
+
+.lab12-xxlarge {
+    font-size: 36px!important
+}
+
+.lab12-xxxlarge {
+    font-size: 48px!important
+}
+
+.lab12-jumbo {
+    font-size: 64px!important
+}
+
+.lab12-left-align {
+    text-align: left!important
+}
+
+.lab12-right-align {
+    text-align: right!important
+}
+
+.lab12-justify {
+    text-align: justify!important
+}
+
+.lab12-center {
+    text-align: center!important
+}
+
+.lab12-border-0 {
+    border: 0!important
+}
+
+.lab12-border {
+    border: 1px solid #ccc!important
+}
+
+.lab12-border-top {
+    border-top: 1px solid #ccc!important
+}
+
+.lab12-border-bottom {
+    border-bottom: 1px solid #ccc!important
+}
+
+.lab12-border-left {
+    border-left: 1px solid #ccc!important
+}
+
+.lab12-border-right {
+    border-right: 1px solid #ccc!important
+}
+
+.lab12-topbar {
+    border-top: 6px solid #ccc!important
+}
+
+.lab12-bottombar {
+    border-bottom: 6px solid #ccc!important
+}
+
+.lab12-leftbar {
+    border-left: 6px solid #ccc!important
+}
+
+.lab12-rightbar {
+    border-right: 6px solid #ccc!important
+}
+
+.lab12-section,
+.lab12-code {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important
+}
+
+.lab12-margin {
+    margin: 16px!important
+}
+
+.lab12-margin-top {
+    margin-top: 16px!important
+}
+
+.lab12-margin-bottom {
+    margin-bottom: 16px!important
+}
+
+.lab12-margin-left {
+    margin-left: 16px!important
+}
+
+.lab12-margin-right {
+    margin-right: 16px!important
+}
+
+.lab12-padding-small {
+    padding: 4px 8px!important
+}
+
+.lab12-padding {
+    padding: 8px 16px!important
+}
+
+.lab12-padding-large {
+    padding: 12px 24px!important
+}
+
+.lab12-padding-16 {
+    padding-top: 16px!important;
+    padding-bottom: 16px!important
+}
+
+.lab12-padding-24 {
+    padding-top: 24px!important;
+    padding-bottom: 24px!important
+}
+
+.lab12-padding-32 {
+    padding-top: 32px!important;
+    padding-bottom: 32px!important
+}
+
+.lab12-padding-48 {
+    padding-top: 48px!important;
+    padding-bottom: 48px!important
+}
+
+.lab12-padding-64 {
+    padding-top: 64px!important;
+    padding-bottom: 64px!important
+}
+
+.lab12-left {
+    float: left!important
+}
+
+.lab12-right {
+    float: right!important
+}
+
+.lab12-button:hover {
+    color: #000!important;
+    background-color: #ccc!important
+}
+
+.lab12-transparent,
+.lab12-hover-none:hover {
+    background-color: transparent!important
+}
+
+.lab12-hover-none:hover {
+    box-shadow: none!important
+}
+
+
+/* Colors */
+
+.lab12-amber,
+.lab12-hover-amber:hover {
+    color: #000!important;
+    background-color: #ffc107!important
+}
+
+.lab12-aqua,
+.lab12-hover-aqua:hover {
+    color: #000!important;
+    background-color: #00ffff!important
+}
+
+.lab12-blue,
+.lab12-hover-blue:hover {
+    color: #fff!important;
+    background-color: #2196F3!important
+}
+
+.lab12-light-blue,
+.lab12-hover-light-blue:hover {
+    color: #000!important;
+    background-color: #87CEEB!important
+}
+
+.lab12-brown,
+.lab12-hover-brown:hover {
+    color: #fff!important;
+    background-color: #795548!important
+}
+
+.lab12-cyan,
+.lab12-hover-cyan:hover {
+    color: #000!important;
+    background-color: #00bcd4!important
+}
+
+.lab12-blue-grey,
+.lab12-hover-blue-grey:hover,
+.lab12-blue-gray,
+.lab12-hover-blue-gray:hover {
+    color: #fff!important;
+    background-color: #607d8b!important
+}
+
+.lab12-green,
+.lab12-hover-green:hover {
+    color: #fff!important;
+    background-color: #4CAF50!important
+}
+
+.lab12-light-green,
+.lab12-hover-light-green:hover {
+    color: #000!important;
+    background-color: #8bc34a!important
+}
+
+.lab12-indigo,
+.lab12-hover-indigo:hover {
+    color: #fff!important;
+    background-color: #3f51b5!important
+}
+
+.lab12-khaki,
+.lab12-hover-khaki:hover {
+    color: #000!important;
+    background-color: #f0e68c!important
+}
+
+.lab12-lime,
+.lab12-hover-lime:hover {
+    color: #000!important;
+    background-color: #cddc39!important
+}
+
+.lab12-orange,
+.lab12-hover-orange:hover {
+    color: #000!important;
+    background-color: #ff9800!important
+}
+
+.lab12-deep-orange,
+.lab12-hover-deep-orange:hover {
+    color: #fff!important;
+    background-color: #ff5722!important
+}
+
+.lab12-pink,
+.lab12-hover-pink:hover {
+    color: #fff!important;
+    background-color: #e91e63!important
+}
+
+.lab12-purple,
+.lab12-hover-purple:hover {
+    color: #fff!important;
+    background-color: #9c27b0!important
+}
+
+.lab12-deep-purple,
+.lab12-hover-deep-purple:hover {
+    color: #fff!important;
+    background-color: #673ab7!important
+}
+
+.lab12-red,
+.lab12-hover-red:hover {
+    color: #fff!important;
+    background-color: #f44336!important
+}
+
+.lab12-sand,
+.lab12-hover-sand:hover {
+    color: #000!important;
+    background-color: #fdf5e6!important
+}
+
+.lab12-teal,
+.lab12-hover-teal:hover {
+    color: #fff!important;
+    background-color: #009688!important
+}
+
+.lab12-yellow,
+.lab12-hover-yellow:hover {
+    color: #000!important;
+    background-color: #ffeb3b!important
+}
+
+.lab12-white,
+.lab12-hover-white:hover {
+    color: #000!important;
+    background-color: #fff!important
+}
+
+.lab12-black,
+.lab12-hover-black:hover {
+    color: #fff!important;
+    background-color: #000!important
+}
+
+.lab12-grey,
+.lab12-hover-grey:hover,
+.lab12-gray,
+.lab12-hover-gray:hover {
+    color: #000!important;
+    background-color: #9e9e9e!important
+}
+
+.lab12-light-grey,
+.lab12-hover-light-grey:hover,
+.lab12-light-gray,
+.lab12-hover-light-gray:hover {
+    color: #000!important;
+    background-color: #f1f1f1!important
+}
+
+.lab12-dark-grey,
+.lab12-hover-dark-grey:hover,
+.lab12-dark-gray,
+.lab12-hover-dark-gray:hover {
+    color: #fff!important;
+    background-color: #616161!important
+}
+
+.lab12-pale-red,
+.lab12-hover-pale-red:hover {
+    color: #000!important;
+    background-color: #ffdddd!important
+}
+
+.lab12-pale-green,
+.lab12-hover-pale-green:hover {
+    color: #000!important;
+    background-color: #ddffdd!important
+}
+
+.lab12-pale-yellow,
+.lab12-hover-pale-yellow:hover {
+    color: #000!important;
+    background-color: #ffffcc!important
+}
+
+.lab12-pale-blue,
+.lab12-hover-pale-blue:hover {
+    color: #000!important;
+    background-color: #ddffff!important
+}
+
+.lab12-text-amber,
+.lab12-hover-text-amber:hover {
+    color: #ffc107!important
+}
+
+.lab12-text-aqua,
+.lab12-hover-text-aqua:hover {
+    color: #00ffff!important
+}
+
+.lab12-text-blue,
+.lab12-hover-text-blue:hover {
+    color: #2196F3!important
+}
+
+.lab12-text-light-blue,
+.lab12-hover-text-light-blue:hover {
+    color: #87CEEB!important
+}
+
+.lab12-text-brown,
+.lab12-hover-text-brown:hover {
+    color: #795548!important
+}
+
+.lab12-text-cyan,
+.lab12-hover-text-cyan:hover {
+    color: #00bcd4!important
+}
+
+.lab12-text-blue-grey,
+.lab12-hover-text-blue-grey:hover,
+.lab12-text-blue-gray,
+.lab12-hover-text-blue-gray:hover {
+    color: #607d8b!important
+}
+
+.lab12-text-green,
+.lab12-hover-text-green:hover {
+    color: #4CAF50!important
+}
+
+.lab12-text-light-green,
+.lab12-hover-text-light-green:hover {
+    color: #8bc34a!important
+}
+
+.lab12-text-indigo,
+.lab12-hover-text-indigo:hover {
+    color: #3f51b5!important
+}
+
+.lab12-text-khaki,
+.lab12-hover-text-khaki:hover {
+    color: #b4aa50!important
+}
+
+.lab12-text-lime,
+.lab12-hover-text-lime:hover {
+    color: #cddc39!important
+}
+
+.lab12-text-orange,
+.lab12-hover-text-orange:hover {
+    color: #ff9800!important
+}
+
+.lab12-text-deep-orange,
+.lab12-hover-text-deep-orange:hover {
+    color: #ff5722!important
+}
+
+.lab12-text-pink,
+.lab12-hover-text-pink:hover {
+    color: #e91e63!important
+}
+
+.lab12-text-purple,
+.lab12-hover-text-purple:hover {
+    color: #9c27b0!important
+}
+
+.lab12-text-deep-purple,
+.lab12-hover-text-deep-purple:hover {
+    color: #673ab7!important
+}
+
+.lab12-text-red,
+.lab12-hover-text-red:hover {
+    color: #f44336!important
+}
+
+.lab12-text-sand,
+.lab12-hover-text-sand:hover {
+    color: #fdf5e6!important
+}
+
+.lab12-text-teal,
+.lab12-hover-text-teal:hover {
+    color: #009688!important
+}
+
+.lab12-text-yellow,
+.lab12-hover-text-yellow:hover {
+    color: #d2be0e!important
+}
+
+.lab12-text-white,
+.lab12-hover-text-white:hover {
+    color: #fff!important
+}
+
+.lab12-text-black,
+.lab12-hover-text-black:hover {
+    color: #000!important
+}
+
+.lab12-text-grey,
+.lab12-hover-text-grey:hover,
+.lab12-text-gray,
+.lab12-hover-text-gray:hover {
+    color: #757575!important
+}
+
+.lab12-text-light-grey,
+.lab12-hover-text-light-grey:hover,
+.lab12-text-light-gray,
+.lab12-hover-text-light-gray:hover {
+    color: #f1f1f1!important
+}
+
+.lab12-text-dark-grey,
+.lab12-hover-text-dark-grey:hover,
+.lab12-text-dark-gray,
+.lab12-hover-text-dark-gray:hover {
+    color: #3a3a3a!important
+}
+
+.lab12-border-amber,
+.lab12-hover-border-amber:hover {
+    border-color: #ffc107!important
+}
+
+.lab12-border-aqua,
+.lab12-hover-border-aqua:hover {
+    border-color: #00ffff!important
+}
+
+.lab12-border-blue,
+.lab12-hover-border-blue:hover {
+    border-color: #2196F3!important
+}
+
+.lab12-border-light-blue,
+.lab12-hover-border-light-blue:hover {
+    border-color: #87CEEB!important
+}
+
+.lab12-border-brown,
+.lab12-hover-border-brown:hover {
+    border-color: #795548!important
+}
+
+.lab12-border-cyan,
+.lab12-hover-border-cyan:hover {
+    border-color: #00bcd4!important
+}
+
+.lab12-border-blue-grey,
+.lab12-hover-border-blue-grey:hover,
+.lab12-border-blue-gray,
+.lab12-hover-border-blue-gray:hover {
+    border-color: #607d8b!important
+}
+
+.lab12-border-green,
+.lab12-hover-border-green:hover {
+    border-color: #4CAF50!important
+}
+
+.lab12-border-light-green,
+.lab12-hover-border-light-green:hover {
+    border-color: #8bc34a!important
+}
+
+.lab12-border-indigo,
+.lab12-hover-border-indigo:hover {
+    border-color: #3f51b5!important
+}
+
+.lab12-border-khaki,
+.lab12-hover-border-khaki:hover {
+    border-color: #f0e68c!important
+}
+
+.lab12-border-lime,
+.lab12-hover-border-lime:hover {
+    border-color: #cddc39!important
+}
+
+.lab12-border-orange,
+.lab12-hover-border-orange:hover {
+    border-color: #ff9800!important
+}
+
+.lab12-border-deep-orange,
+.lab12-hover-border-deep-orange:hover {
+    border-color: #ff5722!important
+}
+
+.lab12-border-pink,
+.lab12-hover-border-pink:hover {
+    border-color: #e91e63!important
+}
+
+.lab12-border-purple,
+.lab12-hover-border-purple:hover {
+    border-color: #9c27b0!important
+}
+
+.lab12-border-deep-purple,
+.lab12-hover-border-deep-purple:hover {
+    border-color: #673ab7!important
+}
+
+.lab12-border-red,
+.lab12-hover-border-red:hover {
+    border-color: #f44336!important
+}
+
+.lab12-border-sand,
+.lab12-hover-border-sand:hover {
+    border-color: #fdf5e6!important
+}
+
+.lab12-border-teal,
+.lab12-hover-border-teal:hover {
+    border-color: #009688!important
+}
+
+.lab12-border-yellow,
+.lab12-hover-border-yellow:hover {
+    border-color: #ffeb3b!important
+}
+
+.lab12-border-white,
+.lab12-hover-border-white:hover {
+    border-color: #fff!important
+}
+
+.lab12-border-black,
+.lab12-hover-border-black:hover {
+    border-color: #000!important
+}
+
+.lab12-border-grey,
+.lab12-hover-border-grey:hover,
+.lab12-border-gray,
+.lab12-hover-border-gray:hover {
+    border-color: #9e9e9e!important
+}
+
+.lab12-border-light-grey,
+.lab12-hover-border-light-grey:hover,
+.lab12-border-light-gray,
+.lab12-hover-border-light-gray:hover {
+    border-color: #f1f1f1!important
+}
+
+.lab12-border-dark-grey,
+.lab12-hover-border-dark-grey:hover,
+.lab12-border-dark-gray,
+.lab12-hover-border-dark-gray:hover {
+    border-color: #616161!important
+}
+
+.lab12-border-pale-red,
+.lab12-hover-border-pale-red:hover {
+    border-color: #ffe7e7!important
+}
+
+.lab12-border-pale-green,
+.lab12-hover-border-pale-green:hover {
+    border-color: #e7ffe7!important
+}
+
+.lab12-border-pale-yellow,
+.lab12-hover-border-pale-yellow:hover {
+    border-color: #ffffcc!important
+}
+
+.lab12-border-pale-blue,
+.lab12-hover-border-pale-blue:hover {
+    border-color: #e7ffff!important
+}
+
+button {
+    background-color: #009688; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
